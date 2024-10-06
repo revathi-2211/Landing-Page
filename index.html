@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>Travel</title>
+    <style>
+        
+        body{
+            background-image: url('img1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1;
+            color: aliceblue;
+        }
+        .nav__logo a{
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            
+        }
+        
+
+        .nav__links{
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            list-style: none;
+
+             }
+        input::placeholder{
+            color: aliceblue;
+        }
+        .search__box{
+            padding: 0.5rem 0;
+            border-bottom: 2px solid white;
+            
+
+        }
+        .search__box input{
+            color: white;
+            background-color: transparent;
+            outline: none;
+            border: none;
+        }
+        .search__box i{
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        
+
+        .login{
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: red;
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .login:hover{
+            background-color: #017479;
+        }
+        .login span{
+            padding: 5px 8px;
+            font-size: 1.5rem;
+            color: #00605f;
+            background-color: #ffffff;
+            border-radius: 100%;
+            
+        }
+        .socials{
+            position: absolute;
+            top: 25rem;
+            left: 0;
+            display: flex;
+            justify-content:flex-end;
+            align-content: flex-end;
+            flex-direction: column;
+            
+            
+            
+        }
+        .socials::after{
+            position: absolute;
+            content: "";
+            top: -22rem;
+            left: 15px;
+            height: 15rem;
+            width: 2px;
+            background-color: white;
+        }    
+        
+        
+        
+        .socials span{
+            font-size: 2rem;
+            color: white;
+            background-color: black;
+            
+        }
+        
+        
+        
+        .container{
+            display: flex;
+            min-height: 100vh;
+            margin: auto;
+            padding: 2rem;
+            padding-top: 100px;
+            position: relative;
+            padding-left: 50px;
+            
+        }
+        
+        .container__right{
+            flex: 1;
+            display: flex;
+            align-items: first baseline;
+            justify-content: flex-start;
+        }
+        
+        
+        .container__left.content{
+            max-width: 400px;
+            display: grid;
+            gap: 1rem;
+            
+        }
+        .content h1{
+            font-size: 4rem;
+            line-height: 4rem;
+            color: yellow;
+            font-weight: 700;
+            
+            
+        }
+        .container__right{
+            justify-content: flex-end;
+        }
+        .content h3{
+            color: whitesmoke;
+            text-align: left;
+        }
+        .btns{
+            display: flex;
+            gap: 1rem;
+        }
+        .btns button{
+            padding: 0.5rem 2rem;
+            color: white;
+            font-size: 1rem;
+            background-color: transparent;
+            outline: none;
+            border: 2px solid white;
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button.read__more{
+            background-color: white;
+            color: black;
+        }
+        form{
+            width: 350px;
+            display: grid;
+            border-radius: 5px;
+            background-color: #ffffff33;
+            color: #f3f4f6;
+        }
+        form h4{
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 2rem;
+            color: black;
+        }
+        .form__group{
+            display:grid;
+            padding: 0 2rem;
+            margin-bottom: 1rem;
+            color: black;
+        }
+        .form__group input{
+            padding: 0.5rem;
+            font-size: 1rem;
+            color: #f3f4f6;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid #f3f4f6;
+        }
+        .form__group input::placeholder{
+            color: black;
+        }
+        form button{
+            margin-top: 1rem;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            background-color: #fead53;
+            color: #f3f4f6;
+            cursor: pointer;
+        }
+        .bottom__tracker{
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+        }
+        .botttom__tracker span{
+            display: inline-block;
+            height: 4px;
+            width: 100px;
+            background-color: #ffffff33;
+        }
+        
+        
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav__logo"><a href="#">Travel.Rey </a></div>
+        <ul class="nav__links">
+            <li class="link">Home</li>
+            <li class="link">Destination</li>
+            <li class="link">Blogs</li>
+            <li class="link">About Us</li>
+            <li class="link">Contact Us</li>
+        </ul>
+        <div class="search__box" >
+            <input type="text" placeholder="search " >
+            <i class="ri-search-line"></i>
+        </div>
+        <div class="login">
+            <span><i class="ri-user-3-fill"></i></span>
+            Log In
+        </div>
+    </nav>
+   
+    
+
+    <div class="container">
+        <div class="container__left">
+            <div class="content">
+                <h1>EXPLORE DREAM<br />DESTINATION.</h1> <br>
+        <h3>Travelling is an amazing way to learn a lot of things in life. <br> A lot of people around the world travel every year
+             to many places. <br> Moreover, it is important to travel to humans. Some travel to learn <br> more while some travel to take 
+             a break from their life. No matter <br> the reason, travelling opens a big door for us to explore the world <br> beyond our 
+             imagination and indulge in many things.</h3> <br>
+             <div class="btns">
+                <button class="read__more">Read More</button>
+                <button class="our__blogs">Our Blogs</button>
+            </div>
+            </div>
+        </div>
+        <div class="container__right">
+        <form>
+            <h4>Where you want to go?</h4>
+            <div class="form__group">
+                <label for="destination">Destination</label>
+                <input type="text" name="destination" id="destination" placeholder="Enter destination">
+            </div>
+            <div class="form__group">
+                <label for="date">Date</label>
+                <input type="text" name="date" id="date" placeholder="dd/mm/yyyy">
+            </div>
+            <button type="submit">Check travel package</button>
+                
+        </form>
+        <div class="socials">
+            <span><i class="ri-twitter-fill"></i></span>
+            <span><i class="ri-facebook-circle-fill"></i></span>
+            <span><i class="ri-instagram-fill"></i></span>
+            <span><i class="ri-youtube-fill"></i></span>
+        </div>
+        </div>
+
+     </div>
+     <div class="bottom__tracker">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+     </div>
+      
+        
+</body>
+</html>
